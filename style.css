@@ -1,0 +1,186 @@
+div {
+  position: absolute;
+
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+
+  height: 100vh;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  overflow: hidden;
+}
+
+.sky {
+  width: 100%;
+
+  height: 100%;
+
+  background: rgb(163, 163, 235);
+
+  z-index: -1;
+}
+
+.ground {
+  width: 110%;
+
+  height: 30%;
+
+  bottom: 0;
+
+  background-color: rgb(86, 236, 86);
+}
+
+.tree.one {
+  width: 5vmin;
+
+  height: 15vmin;
+
+  bottom: 100%;
+
+  left: 20%;
+}
+
+.tree.two {
+  width: 5vmin;
+
+  height: 20vmin;
+
+  bottom: 100%;
+
+  left: 30%;
+}
+
+.tree.three {
+  width: 5vmin;
+
+  height: 15vmin;
+
+  bottom: 100%;
+
+  left: 40%;
+}
+
+.tree.four {
+  width: 5vmin;
+
+  height: 15vmin;
+
+  bottom: 100%;
+
+  left: 50%;
+}
+
+.tree.five {
+  width: 5vmin;
+
+  height: 15vmin;
+
+  bottom: 100%;
+
+  left: 60%;
+}
+
+.tree .body {
+  display: block;
+
+  width: 100%;
+
+  height: 90%;
+
+  background-color: #ff5c33;
+
+  border-radius: 100% 100% 100%/100% 100% 50% 50%;
+
+  box-shadow: inset 1.5vmin --0.5vmin #ff0000;
+}
+
+.tree .trunk {
+  width: 13%;
+
+  height: 10%;
+
+  background: #484444;
+
+  bottom: 0;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.tree .shadow {
+  width: 50%;
+
+  height: 200%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  border-radius: 50%;
+
+  transform: rotateZ(-104deg);
+
+  transform-origin: bottom center;
+
+  left: -7%;
+
+  bottom: -7%;
+}
+
+.sun {
+  width: 200px;
+
+  height: 200px;
+
+  background-color: #ffde00;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
+    0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+
+  animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
+
+  /* z-index: -1; */
+
+  position: fixed;
+
+  top: 30%; /* Optional: Adjust this value to position vertically */
+
+  transform: translateY(
+    -50%
+  ); /* Optional: Adjust this value to center vertically */
+
+  right: 20px;
+
+  left: 70%; /* Adjust this value to set the distance from the right edge */
+
+  z-index: -1;
+}
+
+@keyframes sunrise {
+  0% {
+    box-shadow: none;
+  }
+}
+
+@keyframes rays {
+  0% {
+    box-shadow: 0 0 0 0 #ffde0080, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040,
+      0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 40px 100px #ffde0010;
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
+      0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+  }
+}
